@@ -16,6 +16,8 @@
   --gray-999_40: hsla(var(--gray-999-basis), 0.4);
   --gray-999: #ffffff;
 
+	--oatmeal: #e0c5a7
+
   --accent-light: #c561f6;
   --accent-regular: #7611a6;
   --accent-dark: #1c0056;
@@ -137,7 +139,7 @@ body {
 }
 
 body {
-  background-color: var(--gray-999);
+  background-color: var(--oatmeal);
   color: var(--gray-200);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;

@@ -4,9 +4,9 @@ import ThemeToggle from './ThemeToggle.astro';
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
-	{ label: 'Home', href: '/' },
-	{ label: 'Work', href: '/work/' },
-	{ label: 'About', href: '/about/' },
+	{ label: 'Projects', href: '#projects' },
+	{ label: 'About', href: '#about' },
+	{ label: 'Contact', href: '#contact' },
 ];
 ---
 
@@ -139,6 +139,9 @@ const textLinks: { label: string; href: string }[] = [
 		line-height: 1.1;
 		color: var(--gray-999);
 		text-decoration: none;
+
+		/* small screens */
+		font-size: var(--text-4xl);
 	}
 
 	.menu-button {
@@ -202,12 +205,9 @@ const textLinks: { label: string; href: string }[] = [
 	}
 
 	.menu-footer {
-		--icon-size: var(--text-xl);
-		--icon-padding: 0.5rem;
-
 		display: flex;
 		justify-content: space-between;
-		gap: 0.75rem;
+		gap: 2rem;
 		padding: 1.5rem 2rem 1.5rem 1.5rem;
 		background-color: var(--gray-999);
 		border-radius: 0 0 0.75rem 0.75rem;
@@ -243,7 +243,7 @@ const textLinks: { label: string; href: string }[] = [
 		.nav-items {
 			position: relative;
 			flex-direction: row;
-			font-size: var(--text-sm);
+			font-size: var(--text-md);
 			border-radius: 999rem;
 			border: 0;
 			padding: 0.5rem 0.5625rem;

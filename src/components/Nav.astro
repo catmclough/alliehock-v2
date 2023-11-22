@@ -119,15 +119,16 @@ const textLinks: { label: string; href: string }[] = [
 <style>
 	nav {
 		z-index: 9999;
-		position: relative;
 		font-family: var(--font-brand);
 		font-weight: 500;
 		margin-bottom: 3.5rem;
+		width: 100%;
 	}
 
 	.menu-header {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		gap: 0.5rem;
 		padding: 1.5rem;
 	}
@@ -135,7 +136,6 @@ const textLinks: { label: string; href: string }[] = [
 	.site-title {
 		display: flex;
 		gap: 0.5rem;
-		align-items: center;
 		line-height: 1.1;
 		color: var(--gray-999);
 		text-decoration: none;

@@ -4,7 +4,6 @@
 
 // Component Imports
 import MainHead from '../components/MainHead.astro';
-import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 
 interface Props {
@@ -21,7 +20,6 @@ const { title, description } = Astro.props;
 	</head>
 	<body>
 		<div class="stack backgrounds">
-			<Nav />
 			<slot />
 			<Footer />
 		</div>
@@ -42,6 +40,7 @@ const { title, description } = Astro.props;
 				--bg-scale: 1.68;
 				--bg-aspect-ratio: calc(var(--bg-image-aspect-ratio) / var(--bg-scale));
 				--bg-gradient-size: calc(var(--bg-scale) * 100%);
+				--bg-height: calc(1600px / var(--bg-aspect-ratio));
 			}
 
 			:root.theme-dark {
@@ -75,11 +74,7 @@ const { title, description } = Astro.props;
 
 			.backgrounds {
 				min-height: 100%;
-				isolation: isolate;
-				background:
-					/* splash var(--bg-image-main) top center/var(--bg-gradient-size) no-repeat, */
-					/*splash*/ var(--bg-image-main) top center/var(--bg-gradient-size) no-repeat,
-					/*base*/ var(--oatmeal);
+				background: var(--oatmeal);
 			}
 		</style>
 	</body>

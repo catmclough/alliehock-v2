@@ -11,6 +11,7 @@ import Icon from '../components/Icon.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
 
 // Page section components
+import About from '../components/About.astro';
 import ContactCTA from '../components/ContactCTA.astro';
 import Nav from '../components/Nav.astro';
 
@@ -23,20 +24,15 @@ const projects = (await getCollection('work'))
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 <!--  Sample image
-	<img
-	alt="Jeanine White smiling in a red plaid shirt and tortoise shell glasses"
-	width="480"
-	height="620"
-	src="/assets/portrait.jpg"
 /> -->
 
 <BaseLayout>
 	<div class="splash-container">
 		<Nav />
 	</div>
-	<div class="stack gap-20 lg:gap-48">
-		<main class="wrapper stack gap-20 lg:gap-48">
-			<section class="section with-cta" id="projects">
+	<div class="stack gap-20">
+		<main class="wrapper stack gap-20 lg:gap-48" id="projects">
+			<section class="section with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>Selected Work</h3>
 					<p>Take a look below at some of my featured work for clients from the past few years.</p>
@@ -62,7 +58,7 @@ const projects = (await getCollection('work'))
 				</div>
 			</section>
 		</main>
-
+		<About />
 		<ContactCTA />
 	</div>
 </BaseLayout>
@@ -75,6 +71,14 @@ const projects = (await getCollection('work'))
     background-size: cover;
     background-position: center;
 	}
+	.wrapper {
+		width: 100%;
+		max-width: 83rem;
+		margin-inline: auto;
+		padding-inline: 1.5rem;
+		padding-top: 5rem;
+	}
+
 	.section {
 		display: grid;
 		gap: 2rem;

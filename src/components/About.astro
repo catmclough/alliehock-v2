@@ -1,0 +1,100 @@
+<section id="about">
+	<div class="wrapper">
+		<h3>About Al</h2>
+		<div class="about-text">
+			<p>
+				Allie Hock is a stand up comedian and documentary film producer based in Los Angeles. Her work shines a light on under-appreciated topics by using unconventional angles to draw out themes that are universally relatable.
+			</p>
+			<p>
+				As a stand up comedian, Allie has performed regularly in front of sold-out crowds around Los Angeles and Ogden, Utah.
+			</p>
+			<p>
+				Allie's documentary producing credits include archival-driven documentaries for CNN (The Movies, 'Tis the Season, Land of the Giants), a Disney+ documentary series following professional Japanese surfers and the Olympics (Chasing Waves), and Dave Grohl's celebrity-driven docuseries for Paramount+ (From Cradle to Stage).
+			</p>
+			<p>
+				Allie ran Cross Country and Track for Michigan State University. She studied comedy at The Groundlings Theater in L.A.
+			</p>
+		</div>
+		<img
+			alt="Allie Hock smiling in a blue shirt and sunglasses at a table with a cup of coffee"
+			width="480"
+			height="620"
+			src="/assets/portrait.jpg"
+			loading="lazy"
+			decoding="async"
+			class="portrait"
+		/>
+	</div>
+</section>
+
+<style>
+	section {
+		border-top: 1px solid var(--gray-800);
+		border-bottom: 1px solid var(--gray-800);
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.wrapper {
+		display: grid;
+		gap: 2rem;
+		padding: 5rem 2rem;
+		justify-items: center;
+	}
+
+	h3 {
+		font-size: var(--text-2xl);
+		text-align: center;
+	}
+
+	p {
+		font-size: var(--text-md);
+		color: var(--gray-200);
+		text-align: center;
+		max-width: 50ch;
+		padding-bottom: 1rem;			
+	}
+
+
+	#about img {
+		border-radius: 2rem;
+	}
+
+	@media (min-width: 50em) {
+		.wrapper {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-areas:
+				'portrait about-header'
+				'portrait about-text';
+			gap: 5rem;
+			width: 100%;
+			max-width: 83rem;
+			margin-inline: auto;
+			padding-inline: 1.5rem;
+			align-items: center;
+		}
+
+		h3 {
+			font-size: var(--text-4xl);
+		}
+
+		.about-header {
+			grid-area: about-header;
+		}
+
+		.section-header {
+			grid-area: about-header;
+			font-size: var(--text-lg);
+		}
+
+		.about-text {
+			grid-area: about-text;
+			justify-self: center;
+			align-self: center;
+		}
+
+		#about img {
+			grid-area: portrait;
+		}
+	}
+</style>

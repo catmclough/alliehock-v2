@@ -1,14 +1,11 @@
 ---
-title: Markdown Mystery Tour
+title: Land of the Giants
 publishDate: 2020-03-02 00:00:00
-img: /assets/stock-1.jpg
-img_alt: Iridescent ripples of a bright blue and pink liquid
+img: /assets/lotg.jpeg
+img_alt: Computer screens with text -- Land of the Giants, Titans of Tech
 description: |
   We designed a whodunnit-style game to introduce Markdown formatting. Suspense — suspicion — syntax!
-tags:
-  - Design
-  - Dev
-  - User Testing
+order: 2
 ---
 
 ## Level-two heading

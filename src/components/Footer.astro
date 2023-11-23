@@ -1,21 +1,12 @@
----
-import Icon from './Icon.astro';
-const currentYear = new Date().getFullYear();
----
-
 <footer>
 	<div class="group">
-		<p>
-			Designed & Developed in Portland with <a href="https://astro.build/">Astro</a>
-			<Icon icon="rocket-launch" size="1.2em" />
+		<p>Photo by <a href="https://unsplash.com/@kellyrepreza?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kelly Repreza</a> on <a href="https://unsplash.com/photos/silhouette-of-people-walking-on-street-during-sunset-KVsl8HOWJ5A?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 		</p>
-		<p>&copy; {currentYear} Jeanine White</p>
+		<p>|</p>
+		<p>Website Designed & Developed by Cat McLoughlin</p>
+		<p>|</p>
+		<a href="https://github.com/catmclough"> GitHub</a>
 	</div>
-	<p class="socials">
-		<a href="https://twitter.com/me"> Twitter</a>
-		<a href="https://github.com/me"> GitHub</a>
-		<a href="https://codepen.io/me"> CodePen</a>
-	</p>
 </footer>
 <style>
 	footer {
@@ -27,6 +18,11 @@ const currentYear = new Date().getFullYear();
 		text-align: center;
 		color: var(--gray-400);
 		font-size: var(--text-sm);
+
+		border-top: 1px solid var(--gray-800);
+		border-bottom: 1px solid var(--gray-800);
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
 	}
 
 	footer a {
@@ -43,32 +39,19 @@ const currentYear = new Date().getFullYear();
 
 	.group {
 		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-	}
-
-	.socials {
-		display: flex;
-		justify-content: center;
-		gap: 1rem;
-		flex-wrap: wrap;
+		justify-content: space-around;
 	}
 
 	@media (min-width: 50em) {
 		footer {
-			flex-direction: row;
-			justify-content: space-between;
 			padding: 2.5rem 5rem;
 		}
 
 		.group {
+			justify-content: flex-end;
 			flex-direction: row;
 			gap: 1rem;
 			flex-wrap: wrap;
-		}
-
-		.socials {
-			justify-content: flex-end;
 		}
 	}
 </style>

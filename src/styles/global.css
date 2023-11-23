@@ -10,17 +10,20 @@
   --gray-500: #8490b5;
   --gray-600: #a3acc8;
   --gray-700: #c3cadb;
-  --gray-800: #e3e6ee;
+  --gray-800: #dad7cd;
   --gray-900: #f3f4f7;
   --gray-999-basis: 0, 0%, 100%;
   --gray-999_40: hsla(var(--gray-999-basis), 0.4);
   --gray-999: #ffffff;
 
-  --oatmeal: #e1c6a8;
-  --accent-light: #c561f6;
-  --accent-regular: #7611a6;
-  --accent-dark: #1c0056;
-  --accent-overlay: hsla(280, 89%, 67%, 0.33);
+  /* --oatmeal: #e1c6a8; */
+  /* --oatmeal: #c2c5aa; */
+  --oatmeal: #344e41;
+  --oatmeal-dark: #a58672;
+  --accent-light: #a4ac86;
+  --accent-regular: #656d4a;
+  --accent-dark: #414833;
+  --accent-overlay: hsla(74, 19%, 36%, 0.33);
   --accent-subtle-overlay: var(--accent-overlay);
   --accent-text-over: var(--gray-999);
 
@@ -41,12 +44,7 @@
     var(--gradient-stop-2),
     var(--gradient-stop-3)
   );
-  --gradient-accent-orange: linear-gradient(
-    150deg,
-    #ca7879,
-    var(--accent-regular),
-    var(--accent-dark)
-  );
+  --gradient-accent-green: linear-gradient(150deg, #809b0e, #aeb778);
   --gradient-stroke: linear-gradient(180deg, var(--gray-900), var(--gray-700));
 
   /* Shadows */
@@ -97,14 +95,38 @@
   --gray-999-basis: 225, 31%, 5%;
   --gray-999: #090b11;
 
-  --accent-light: #1c0056;
+  --accent-light: #a4ac86;
   --accent-regular: #7611a6;
-  --accent-dark: #c561f6;
+  --accent-dark: #283618;
   --accent-overlay: hsla(280, 89%, 67%, 0.33);
   --accent-subtle-overlay: hsla(281, 81%, 36%, 0.33);
   --accent-text-over: var(--gray-0);
 
   --link-color: var(--accent-dark);
+
+  /* Generated green gradient */
+  /* background: hsla(74, 19%, 36%, 1);
+  background: linear-gradient(
+    135deg,
+    hsla(74, 19%, 36%, 1) 8%,
+    hsla(85, 14%, 59%, 1) 44%,
+    hsla(58, 100%, 68%, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    135deg,
+    hsla(74, 19%, 36%, 1) 8%,
+    hsla(85, 14%, 59%, 1) 44%,
+    hsla(58, 100%, 68%, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    135deg,
+    hsla(74, 19%, 36%, 1) 8%,
+    hsla(85, 14%, 59%, 1) 44%,
+    hsla(58, 100%, 68%, 1) 100%
+  ); */
+  /* Generated green gradient end */
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#656D4A", endColorstr="#9AA689", GradientType=1 );
 
   --gradient-stop-1: #4c11c6;
   --gradient-subtle: linear-gradient(
@@ -112,9 +134,9 @@
     var(--gray-900) 19%,
     var(--gray-999) 81%
   );
-  --gradient-accent-orange: linear-gradient(
+  --gradient-accent-green: linear-gradient(
     150deg,
-    #ca7879,
+    #f9a620,
     var(--accent-regular),
     var(--accent-light)
   );
@@ -171,7 +193,7 @@ h5 {
   line-height: 1.1;
   font-family: var(--font-brand);
   font-weight: 600;
-  color: var(--gray-100);
+  color: var(--gray-800);
 }
 
 h1 {

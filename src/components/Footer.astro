@@ -1,32 +1,25 @@
 <footer>
-	<div class="group">
-		<p>Photo by <a href="https://unsplash.com/@kellyrepreza?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kelly Repreza</a> on <a href="https://unsplash.com/photos/silhouette-of-people-walking-on-street-during-sunset-KVsl8HOWJ5A?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-		</p>
-		<p>|</p>
-		<p>Website Designed & Developed by Cat McLoughlin</p>
-		<p>|</p>
-		<a href="https://github.com/catmclough"> GitHub</a>
-	</div>
+	<p>Photo by <a href="https://unsplash.com/@kellyrepreza?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kelly Repreza</a> on <a href="https://unsplash.com/photos/silhouette-of-people-walking-on-street-during-sunset-KVsl8HOWJ5A?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+	</p>
+	<p>Website Designed & Developed by <a href="https://github.com/catmclough">Cat McLoughlin</a></p>
 </footer>
 <style>
 	footer {
 		display: flex;
 		flex-direction: column;
-		gap: 3rem;
+		gap: 1rem;
 		margin-top: auto;
 		padding: 3rem 2rem 3rem;
 		text-align: center;
-		color: var(--gray-400);
+		color: var(--gray-100);
 		font-size: var(--text-sm);
 
-		border-top: 1px solid var(--gray-800);
-		border-bottom: 1px solid var(--gray-800);
 		background-color: var(--gray-999_40);
 		box-shadow: var(--shadow-sm);
 	}
 
 	footer a {
-		color: var(--gray-400);
+		color: var(--gray-200);
 		text-decoration: 1px solid underline transparent;
 		text-underline-offset: 0.25em;
 		transition: text-decoration-color var(--theme-transition);
@@ -45,13 +38,8 @@
 	@media (min-width: 50em) {
 		footer {
 			padding: 2.5rem 5rem;
-		}
-
-		.group {
-			justify-content: flex-end;
 			flex-direction: row;
-			gap: 1rem;
-			flex-wrap: wrap;
+			justify-content: space-between;
 		}
 	}
 </style>

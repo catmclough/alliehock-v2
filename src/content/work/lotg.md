@@ -1,5 +1,6 @@
 ---
 title: Land of the Giants
+network: "CNN"
 publishDate: 2020-03-02 00:00:00
 img: /assets/lotg.jpeg
 img_alt: Computer screens with text -- Land of the Giants, Titans of Tech

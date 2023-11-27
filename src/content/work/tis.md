@@ -1,5 +1,6 @@
 ---
 title: "'Tis The Season"
+network: "CNN"
 publishDate: 2019-12-01 00:00:00
 img: /assets/tis.jpeg
 img_alt: "Christmas tree with ornament containing text: 'Tis the Season"

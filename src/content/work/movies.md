@@ -1,5 +1,6 @@
 ---
-title: "CNN's The Movies"
+title: "The Movies"
+network: "CNN"
 publishDate: 2019-12-01 00:00:00
 img: /assets/movies.jpg
 img_alt: "Movie Stars throughout the eras with the text: The Movies"

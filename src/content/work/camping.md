@@ -1,5 +1,6 @@
 ---
 title: "It's Camping!"
+network: "YouTube"
 publishDate: 2019-12-01 00:00:00
 img: /assets/camping.png
 img_alt: "Fall foliage with text: It's Camping!"

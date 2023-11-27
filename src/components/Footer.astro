@@ -1,5 +1,8 @@
 <footer>
-	<p>Photo by <a href="https://unsplash.com/@kellyrepreza?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kelly Repreza</a> on <a href="https://unsplash.com/photos/silhouette-of-people-walking-on-street-during-sunset-KVsl8HOWJ5A?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+	<p>Photos by 
+		<a href="https://unsplash.com/photos/cars-parked-at-the-road-ma040gG3Mjg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Mark Adriane</a>
+		and 
+		<a href="https://unsplash.com/photos/silhouette-of-people-walking-on-street-during-sunset-KVsl8HOWJ5A?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kelly Repreza</a>
 	</p>
 	<p>Website Designed & Developed by <a href="https://github.com/catmclough">Cat McLoughlin</a></p>
 </footer>
@@ -33,6 +36,24 @@
 	.group {
 		display: flex;
 		justify-content: space-around;
+	}
+	:root {
+		--_placeholder-bg: linear-gradient(transparent, transparent);
+		--bg-image-main-curves: url('/assets/backgrounds/bg-main-light.svg');
+		--bg-svg-blend-mode: overlay;
+		--bg-blend-mode: darken;
+		--bg-image-aspect-ratio: 2.25;
+		--bg-scale: 1.68;
+		--bg-aspect-ratio: calc(var(--bg-image-aspect-ratio) / var(--bg-scale));
+		--bg-gradient-size: calc(var(--bg-scale) * 100%);
+		--bg-height: calc(1600px / var(--bg-aspect-ratio));
+	}
+
+	:root.theme-dark {
+		--bg-image-main: url('/assets/backgrounds/dark-splash-800w.jpg');
+		--bg-image-main-curves: url('/assets/backgrounds/bg-main-dark.svg');
+		--bg-svg-blend-mode: darken;
+		--bg-blend-mode: lighten;
 	}
 
 	@media (min-width: 50em) {

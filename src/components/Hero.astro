@@ -9,9 +9,12 @@ const { align = 'center', tagline, title } = Astro.props;
 ---
 
 <div class:list={['hero stack gap-4', align]}>
-	<div class="stack gap-2">
+	<div class="stack gap-8">
 		<h1 class="title">{title}</h1>
 		{tagline && <p class="tagline">{tagline}</p>}
+		<a href="/" class="home-button">
+			Back To Home
+		</a>
 	</div>
 	<slot />
 </div>
@@ -22,15 +25,30 @@ const { align = 'center', tagline, title } = Astro.props;
 		text-align: center;
 	}
 
+	.home-button {
+		background-color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 8px;
+		width: fit-content;
+		align-self: center;
+		text-decoration: none;
+	}
+
+	.home-button:hover {
+		box-shadow: var(--shadow-md);
+	}
+
 	.title,
 	.tagline {
 		max-width: 37ch;
 		margin-inline: auto;
+		font-size: var(--text-3xl);
+    color: var(--accent-light);
 	}
 
 	.title {
-		font-size: var(--text-3xl);
-		color: var(--gray-0);
+		font-size: var(--text-6xl);
+		color: var(--gray-999_40);;
 	}
 
 	@media (min-width: 50em) {
@@ -45,10 +63,6 @@ const { align = 'center', tagline, title } = Astro.props;
 		.start .title,
 		.start .tagline {
 			margin-inline: unset;
-		}
-
-		.title {
-			font-size: var(--text-5xl);
 		}
 	}
 </style>

@@ -15,7 +15,7 @@ import About from '../components/About.astro';
 import ContactCTA from '../components/ContactCTA.astro';
 import Nav from '../components/Nav.astro';
 
-// Content Fetching: List four most recent work projects
+// Content Fetching: List all work projects
 const projects = (await getCollection('work'))
 	.sort((a, b) => a.data.order.valueOf() - b.data.order.valueOf());
 

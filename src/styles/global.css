@@ -44,7 +44,7 @@
     var(--gradient-stop-2),
     var(--gradient-stop-3)
   );
-  --gradient-accent-green: linear-gradient(150deg, #809b0e, #aeb778);
+  --gradient-cta: linear-gradient(150deg, #ffd78a, #b6f3c9);
   --gradient-stroke: linear-gradient(180deg, var(--gray-900), var(--gray-700));
 
   /* Shadows */
@@ -134,7 +134,7 @@
     var(--gray-900) 19%,
     var(--gray-999) 81%
   );
-  --gradient-accent-green: linear-gradient(
+  --gradient-cta: linear-gradient(
     150deg,
     #f9a620,
     var(--accent-regular),

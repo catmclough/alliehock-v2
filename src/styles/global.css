@@ -216,7 +216,21 @@ h5 {
   font-size: var(--text-xl);
 }
 
+#astronav-menu {
+  display: flex;
+  border: 0;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--gray-300);
+  background: radial-gradient(var(--gray-900), var(--gray-800) 150%);
+  box-shadow: var(--shadow-lg);
+}
+
 /* Utilities */
+.hidden {
+  visibility: hidden;
+}
 
 .sr-only {
   position: absolute;

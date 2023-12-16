@@ -14,7 +14,6 @@ import PortfolioPreview from '../components/PortfolioPreview.astro';
 import About from '../components/About.astro';
 import ContactCTA from '../components/ContactCTA.astro';
 import Nav from '../components/Nav.astro';
-import Astronamy from '../components/Astronamy.astro';
 
 // Content Fetching: List all work projects
 const projects = (await getCollection('work'))
@@ -26,7 +25,7 @@ const projects = (await getCollection('work'))
 
 <BaseLayout>
 	<div class="splash-container">
-		<Astronamy />
+		<Nav />
 	</div>
 	<div class="stack gap-20">
 		<main class="wrapper stack gap-20 lg:gap-48" id="projects">

@@ -299,4 +299,8 @@ h5 {
   .lg\:gap-48 {
     gap: 12rem;
   }
+
+  #astronav-menu {
+    display: none;
+  }
 }

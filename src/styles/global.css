@@ -18,13 +18,21 @@
 
   /* --oatmeal: #e1c6a8; */
   /* --oatmeal: #c2c5aa; */
-  --oatmeal: #344e41;
+  --oatmeal: #335145;
   --oatmeal-dark: #a58672;
+
+  --background: linear-gradient(
+    135deg,
+    hsla(74, 19%, 36%, 1) 8%,
+    hsla(85, 14%, 59%, 1) 8%,
+    hsla(156, 23%, 26%, 1) 54%,
+    hsla(85, 14%, 59%, 1) 100%
+  );
 
   --site-title: var(--gray-999);
   --section-header: var(--gray-800);
   --accent-light: #a4ac86;
-  --accent-regular: #656d4a;
+  --accent-regular: #465362;
   --accent-dark: #414833;
   --accent-overlay: hsla(74, 19%, 36%, 0.73);
   --accent-subtle-overlay: hsla(74, 19%, 36%, 0.33);
@@ -49,7 +57,8 @@
     var(--gradient-stop-2),
     var(--gradient-stop-3)
   );
-  --gradient-cta: linear-gradient(150deg, #ffd78a, #b6f3c9);
+  --cta: #ced59e;
+  /* --gradient-cta: linear-gradient(150deg, #82a3a1, #465362); */
   --gradient-stroke: linear-gradient(180deg, var(--gray-900), var(--gray-700));
 
   /* Shadows */
@@ -144,11 +153,7 @@
     var(--gray-900) 19%,
     var(--gray-999) 81%
   );
-  --gradient-cta: linear-gradient(
-    150deg,
-    var(--accent-regular),
-    var(--accent-light)
-  );
+  --cta: linear-gradient(150deg, var(--accent-regular), var(--accent-light));
   --gradient-stroke: linear-gradient(180deg, var(--gray-600), var(--gray-800));
 
   --shadow-sm: 0px 6px 3px rgba(255, 255, 255, 0.01),

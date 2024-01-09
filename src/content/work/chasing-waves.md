@@ -1,11 +1,8 @@
 ---
 title: Chasing Waves
 network: "Disney+"
-publishDate: 2020-03-02 00:00:00
 img: /assets/waves.jpeg
 img_alt: Sillhouette of two surfers with the text 'Chasing Waves'
-description: |
-  We developed a virtual showcase for the softest bedding imaginable.
 order: 1
 ---
 

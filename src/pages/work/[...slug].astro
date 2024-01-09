@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('work');
+  return blogEntries.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+
+// // Content Fetching: List all work projects
+// const projects = (await getCollection('work'))
+// 	.sort((a, b) => a.data.order.valueOf() - b.data.order.valueOf());
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<BaseLayout title="Some Project" description="Some Project Page!">
+	<Nav />
+  <Content />
+</BaseLayou>

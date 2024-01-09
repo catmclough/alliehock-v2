@@ -1,12 +1,8 @@
 ---
 title: "'Tis The Season"
 network: "CNN"
-publishDate: 2019-12-01 00:00:00
 img: /assets/tis.jpeg
 img_alt: "Christmas tree with ornament containing text: 'Tis the Season"
-description: |
-  We paired with a cutting-edge music API and a team of horticulturalists
-  to build AI-generated playlists that maximize houseplant health.
 order: 3
 ---
 

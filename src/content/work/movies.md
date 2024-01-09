@@ -1,12 +1,8 @@
 ---
 title: "The Movies"
 network: "CNN"
-publishDate: 2019-12-01 00:00:00
 img: /assets/movies.jpg
 img_alt: "Movie Stars throughout the eras with the text: The Movies"
-description: |
-  We paired with a cutting-edge music API and a team of horticulturalists
-  to build AI-generated playlists that maximize houseplant health.
 order: 6
 ---
 

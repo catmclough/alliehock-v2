@@ -29,15 +29,39 @@ export default defineConfig({
   schema: {
     collections: [
       {
-        name: "post",
-        label: "Posts",
-        path: "content/posts",
+        name: "work",
+        label: "Work",
+        path: "src/content/work",
         fields: [
           {
             type: "string",
             name: "title",
             label: "Title",
             isTitle: true,
+            required: true,
+          },
+          {
+            type: "string",
+            name: "network",
+            label: "Network",
+            required: false,
+          },
+          {
+            type: "image",
+            name: "img",
+            label: "Banner Image",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "img_alt",
+            label: "Image Description",
+            required: true,
+          },
+          {
+            type: "number",
+            name: "order",
+            label: "Home Screen Order",
             required: true,
           },
           {

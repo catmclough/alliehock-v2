@@ -76,7 +76,7 @@ const textLinks: { label: string; href: string }[] = [
 		display: grid;
     grid-template-columns: 1fr 1fr;
 		padding: 3rem;
-    background: radial-gradient(var(--gray-900), var(--gray-800) 150%);
+    background: var(--gradient-subtle);
     box-shadow: var(--shadow-lg);
 	}
 
@@ -90,6 +90,7 @@ const textLinks: { label: string; href: string }[] = [
 
 	.link {
 		text-decoration: none;
+		color: var(--gray-200);
 	}
 
 	.theme-toggle {

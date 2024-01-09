@@ -38,6 +38,7 @@
   --accent-subtle-overlay: hsla(74, 19%, 36%, 0.33);
   --accent-text-over: var(--gray-999);
 
+  --anchor-links-bg: radial-gradient(var(--gray-900), var(--gray-800) 150%);
   --link-color: var(--accent-regular);
 
   --email: var(--gray-50);
@@ -119,6 +120,8 @@
 
   --site-title: var(--accent-light);
   --section-header: var(--accent-light);
+
+  --anchor-links-bg: var(--gray-900);
   --link-color: var(--accent-dark);
 
   --email: var(--gray-900);

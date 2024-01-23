@@ -1,0 +1,98 @@
+---
+interface Props {
+	headerText?: string;
+  imgSrc?: string;
+  imgAlt?: string;
+}
+
+const { headerText, imgAlt, imgSrc } = Astro.props;
+---
+
+<div class="description-wrapper">
+  <div class="description-content">
+    <h3 class="description-header">{headerText}</h2>
+    <div class="description-text">
+      <slot />
+    </div>
+    <img
+      alt={imgAlt}
+      width="480"
+      height="620"
+      src={imgSrc}
+      loading="lazy"
+      decoding="async"
+      class="portrait"
+    />
+  </div>
+</div>
+
+<style>
+	.description-wrapper {
+		background-color: var(--gray-999_40);;
+		box-shadow: var(--shadow-sm);
+	}
+
+  .description-content {
+		display: grid;
+		gap: 2rem;
+		padding: 5rem 2rem;
+		justify-items: center;
+  }
+
+	h3 {
+		font-size: var(--text-2xl);
+		text-align: center;
+		color: var(--section-header)
+	}
+
+.description-text {
+		font-size: var(--text-md);
+		color: var(--gray-50);
+		text-align: center;
+		max-width: 50ch;
+		padding-bottom: 1rem;			
+    display: grid;
+    gap: 1rem;
+	}
+
+	img {
+		border-radius: 2rem;
+	}
+
+	@media (min-width: 50em) {
+    .description-content {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-areas:
+				'portrait description-header'
+				'portrait description-text';
+			width: 100%;
+			max-width: 83rem;
+			margin-inline: auto;
+			padding-inline: 1.5rem;
+			align-items: center;
+    }
+
+		h3 {
+			font-size: var(--text-4xl);
+		}
+
+		.description-header {
+			grid-area: description-header;
+		}
+
+		.section-header {
+			grid-area: description-header;
+			font-size: var(--text-lg);
+		}
+
+		.description-text {
+			grid-area: description-text;
+			justify-self: center;
+			align-self: center;
+		}
+
+		img {
+			grid-area: portrait;
+		}
+	}
+</style>

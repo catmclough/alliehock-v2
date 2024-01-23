@@ -1,24 +1,106 @@
 ---
-import { getCollection } from 'astro:content';
+import { type CollectionEntry, getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Nav from '../../components/Nav.astro';
+import Hero from '../../components/Hero.astro';
+import Icon from '../../components/Icon.astro';
+import ContactCTA from '../../components/ContactCTA.astro';
+import Pill from '../../components/Pill.astro';
+import Description from '../../components/Description.astro';
 
-export async function getStaticPaths() {
-  const blogEntries = await getCollection('work');
-  return blogEntries.map(entry => ({
-    params: { slug: entry.slug }, props: { entry },
-  }));
+interface Props {
+	entry: CollectionEntry<'work'>;
 }
 
-// // Content Fetching: List all work projects
-// const projects = (await getCollection('work'))
-// 	.sort((a, b) => a.data.order.valueOf() - b.data.order.valueOf());
+// This is a dynamic route that generates a page for every Markdown file in src/content/
+// Read more about dynamic routes and this `getStaticPaths` function in the Astro docs:
+// https://docs.astro.build/en/core-concepts/routing/#dynamic-routes
+export async function getStaticPaths() {
+	const work = await getCollection('work');
+	return work.map((entry) => ({
+		params: { slug: entry.slug },
+		props: { entry },
+	}));
+}
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<BaseLayout title="Some Project" description="Some Project Page!">
-	<Nav />
-  <Content />
-</BaseLayou>
+<BaseLayout title={entry.data.title} description="Allie Hock Project Details">
+  <Nav />
+	<div class="stack">
+    <header>
+      <div class="wrapper stack gap-2">
+        <a class="back-link" href="/"><Icon icon="arrow-left" /> Home</a>
+        <div class="details">
+          <h1 class="project-title">{entry.data.title}</h1>
+          <div class="tags">
+            <Pill>{entry.data.network}</Pill>
+          </div>
+        </div>
+      </div>
+    </header>
+    <Description imgAlt={entry.data.img_alt} imgSrc={entry.data.img}>
+      <Content />
+    </Description>
+    <main class="wrapper">
+      <div class="content">
+      </div>
+    </main>
+  </div>
+  <ContactCTA />
+</div>
+</BaseLayout>
+
+<style>
+.project-title {
+  color: var(--section-header);
+}
+header {
+  padding-bottom: 2.5rem;
+}
+
+.back-link {
+  display: none;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5rem;
+  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.back-link {
+  text-decoration: 1px solid underline transparent;
+  text-underline-offset: 0.25em;
+  transition: text-decoration-color var(--theme-transition);
+}
+
+.back-link:hover,
+.back-link:focus {
+  text-decoration-color: currentColor;
+}
+
+@media (min-width: 50em) {
+  .back-link {
+    display: block;
+    align-self: flex-start;
+    font-size: var(--text-xl);
+  }
+
+  .details {
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: end;
+  }
+}
+</style>

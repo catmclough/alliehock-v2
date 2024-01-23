@@ -6,6 +6,6 @@ img_alt: 'Christmas tree with ornament containing text: ''Tis the Season'
 order: 3
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere commodo venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam non ligula vel metus efficitur hendrerit. In hac habitasse platea dictumst. Praesent et mauris ut mi dapibus semper. Curabitur tortor justo, efficitur sit amet pretium cursus, porta eget odio. Cras ac venenatis dolor. Donec laoreet posuere malesuada. Curabitur nec mi tempor, placerat leo sit amet, tincidunt est. Quisque pellentesque venenatis magna, eget tristique nibh pulvinar in. Vestibulum vitae volutpat arcu. Aenean ut malesuada odio, sit amet pellentesque odio. Suspendisse nunc elit, blandit nec hendrerit non, aliquet at magna. Donec id leo ut nulla sagittis sodales.
+Joined during pre-production and helped construct top-level story for 2 hour documentary special for CNN. Attended all meetings with network executives to field notes and provide updates. Identified experts to interview. Worked directly with 3 editors to construct scenes. Interviewed experts and A-list talent in San Francisco and Los Angeles: Shane Black, Phil Rosenthal, NPR’s Aisha Harris, Clea Duvall.
 
-### So i **'TIS**
+Managed researcher to fulfill archival needs. 

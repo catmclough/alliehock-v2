@@ -24,11 +24,11 @@ const projects = (await getCollection('work'))
 	<div class="splash-container">
 		<Nav />
 	</div>
-	<div class="stack gap-20">
+	<div class="stack">
 		<main class="wrapper stack gap-20 lg:gap-48" id="projects">
 			<!-- TODO: Potentially keep a call to action with a link to a full resume? -->
 			<!-- <section class="section with-cta"> -->
-			<section class="section">
+			<section class="section selected-work">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>Selected Work</h3>
 					<!-- <p>Take a look below at some of my featured work for clients from the past few years.</p> -->
@@ -85,6 +85,10 @@ const projects = (await getCollection('work'))
 		color: var(--section-header);
 	}
 
+	.selected-work {
+		padding: 0 0.5rem;
+	}
+
 	@media (min-width: 50em) {
 		.splash-container {
 			background-position: center;
@@ -121,26 +125,6 @@ const projects = (await getCollection('work'))
 
 		.cta {
 			grid-area: cta;
-		}
-	}
-
-	.mention-card {
-		display: flex;
-		height: 7rem;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		border: 1px solid var(--gray-800);
-		border-radius: 1.5rem;
-		color: var(--gray-300);
-		background: var(--gradient-subtle);
-		box-shadow: var(--shadow-sm);
-	}
-
-	@media (min-width: 50em) {
-		.mention-card {
-			border-radius: 1.5rem;
-			height: 9.5rem;
 		}
 	}
 </style>

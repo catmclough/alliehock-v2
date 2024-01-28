@@ -31,13 +31,12 @@ const { Content } = await entry.render();
   <Nav />
 	<div class="stack">
     <header>
-      <div class="wrapper stack gap-2">
-        <a class="back-link" href="/"><Icon icon="arrow-left" /> Home</a>
-        <div class="details">
-          <h1 class="project-title">{entry.data.title}</h1>
-          <div class="tags">
-            <Pill>{entry.data.network}</Pill>
-          </div>
+      <a class="back-link" href="/"><Icon icon="arrow-left" /> Home</a>
+      <div class="details">
+        <h1 class="project-title">{entry.data.title}</h1>
+        <div class="tags">
+          <Pill>{entry.data.title}</Pill>
+          <Pill>{entry.data.network}</Pill>
         </div>
       </div>
     </header>
@@ -52,26 +51,22 @@ const { Content } = await entry.render();
 <style>
 .project-title {
   color: var(--section-header);
+  padding-bottom: 1rem;
 }
 header {
-  padding-bottom: 2.5rem;
+  padding: 2.5rem 5rem;
 }
 
+.details {
+  text-align: center;
+}
 .back-link {
   display: none;
 }
 
-.details {
-  display: flex;
-  flex-direction: column;
-  padding: 0 5rem;
-  gap: 1.5rem;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .tags {
   display: flex;
+  justify-content: center;
   gap: 0.5rem;
 }
 
@@ -88,15 +83,20 @@ header {
 
 @media (min-width: 50em) {
   .back-link {
-    display: block;
+    display: inline-block;
     align-self: flex-start;
     font-size: var(--text-xl);
   }
 
   .details {
-    flex-direction: row;
-    gap: 2.5rem;
+    float: right;
+  }
+
+  .tags {
+    display: flex;
     justify-content: end;
+    gap: 0.5rem;
+    text-align: center;
   }
 }
 </style>

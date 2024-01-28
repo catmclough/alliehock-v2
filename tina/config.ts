@@ -47,6 +47,12 @@ export default defineConfig({
             required: false,
           },
           {
+            type: "string",
+            name: "credit",
+            label: "Credit",
+            required: false,
+          },
+          {
             type: "image",
             name: "img",
             label: "Banner Image",

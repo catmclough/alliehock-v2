@@ -1,9 +1,11 @@
 ---
 title: Land of the Giants
-network: "CNN"
+network: CNN
+credit: Producer
 img: /assets/lotg.jpeg
 img_alt: Computer screens with text -- Land of the Giants, Titans of Tech
 order: 2
+year: 2022
 ---
 
 ## Level-two heading

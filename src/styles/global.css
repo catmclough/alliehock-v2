@@ -264,6 +264,7 @@ h5 {
 
 /* Utilities */
 .hidden {
+  height: 0;
   visibility: hidden;
 }
 
@@ -345,5 +346,9 @@ h5 {
 
   #astronav-menu {
     display: none;
+  }
+
+  .hidden {
+    height: unset;
   }
 }

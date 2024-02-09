@@ -1,19 +1,14 @@
 ---
 interface Props {
-	headerText?: string;
   imgSrc?: string;
   imgAlt?: string;
 }
 
-const { headerText, imgAlt, imgSrc } = Astro.props;
+const { imgAlt, imgSrc } = Astro.props;
 ---
 
 <div class="description-wrapper">
   <div class="description-content">
-    <h3 class="description-header">{headerText}</h2>
-    <div class="description-text">
-      <slot />
-    </div>
     <img
       alt={imgAlt}
       width="480"
@@ -23,6 +18,9 @@ const { headerText, imgAlt, imgSrc } = Astro.props;
       decoding="async"
       class="portrait"
     />
+    <div class="description-text">
+      <slot />
+    </div>
   </div>
 </div>
 
@@ -49,8 +47,7 @@ const { headerText, imgAlt, imgSrc } = Astro.props;
 		font-size: var(--text-md);
 		color: var(--gray-50);
 		text-align: center;
-		max-width: 50ch;
-		padding-bottom: 1rem;			
+		padding-bottom: 1rem;
     display: grid;
     gap: 1rem;
 	}
@@ -63,7 +60,7 @@ const { headerText, imgAlt, imgSrc } = Astro.props;
     .description-content {
 			grid-template-columns: repeat(2, 1fr);
 			grid-template-areas:
-				'portrait description-header'
+				'portrait description-text'
 				'portrait description-text';
 			width: 100%;
 			max-width: 83rem;
@@ -74,15 +71,6 @@ const { headerText, imgAlt, imgSrc } = Astro.props;
 
 		h3 {
 			font-size: var(--text-4xl);
-		}
-
-		.description-header {
-			grid-area: description-header;
-		}
-
-		.section-header {
-			grid-area: description-header;
-			font-size: var(--text-lg);
 		}
 
 		.description-text {

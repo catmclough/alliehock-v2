@@ -6,7 +6,7 @@ import Hero from '../../components/Hero.astro';
 import Icon from '../../components/Icon.astro';
 import ContactCTA from '../../components/ContactCTA.astro';
 import Pill from '../../components/Pill.astro';
-import Description from '../../components/Description.astro';
+import ProjectDescription from '../../components/ProjectDescription.astro';
 
 interface Props {
 	entry: CollectionEntry<'work'>;
@@ -41,7 +41,7 @@ const { Content } = await entry.render();
         </div>
       </div>
     </header>
-    <Description imgAlt={entry.data.img_alt} imgSrc={entry.data.img}>
+    <ProjectDescription imgAlt={entry.data.img_alt} imgSrc={entry.data.img}>
       <Content />
     </Description>
   </div>

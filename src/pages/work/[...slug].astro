@@ -1,26 +1,26 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Nav from '../../components/Nav.astro';
-import Hero from '../../components/Hero.astro';
-import Icon from '../../components/Icon.astro';
-import ContactCTA from '../../components/ContactCTA.astro';
-import Pill from '../../components/Pill.astro';
-import ProjectDescription from '../../components/ProjectDescription.astro';
+import { type CollectionEntry, getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Nav from "../../components/Nav.astro";
+import Hero from "../../components/Hero.astro";
+import Icon from "../../components/Icon.astro";
+import ContactCTA from "../../components/ContactCTA.astro";
+import Pill from "../../components/Pill.astro";
+import ProjectDescription from "../../components/ProjectDescription.astro";
 
 interface Props {
-	entry: CollectionEntry<'work'>;
+  entry: CollectionEntry<"work">;
 }
 
 // This is a dynamic route that generates a page for every Markdown file in src/content/
 // Read more about dynamic routes and this `getStaticPaths` function in the Astro docs:
 // https://docs.astro.build/en/core-concepts/routing/#dynamic-routes
 export async function getStaticPaths() {
-	const work = await getCollection('work');
-	return work.map((entry) => ({
-		params: { slug: entry.slug },
-		props: { entry },
-	}));
+  const work = await getCollection("work");
+  return work.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
 }
 
 const { entry } = Astro.props;
@@ -29,7 +29,7 @@ const { Content } = await entry.render();
 
 <BaseLayout title={entry.data.title} description="Allie Hock Project Details">
   <Nav />
-	<div class="stack">
+  <div class="stack">
     <header>
       <a class="back-link" href="/"><Icon icon="arrow-left" /> Home</a>
       <div class="details">
@@ -43,61 +43,60 @@ const { Content } = await entry.render();
     </header>
     <ProjectDescription imgAlt={entry.data.img_alt} imgSrc={entry.data.img}>
       <Content />
-    </Description>
+    </ProjectDescription>
   </div>
   <ContactCTA />
-</div>
 </BaseLayout>
 
 <style>
-.project-title {
-  color: var(--section-header);
-  padding-bottom: 1rem;
-}
-header {
-  padding: 2.5rem 5rem;
-}
-
-.details {
-  text-align: center;
-}
-.back-link {
-  display: none;
-}
-
-.tags {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.back-link {
-  text-decoration: 1px solid underline transparent;
-  text-underline-offset: 0.25em;
-  transition: text-decoration-color var(--theme-transition);
-}
-
-.back-link:hover,
-.back-link:focus {
-  text-decoration-color: currentColor;
-}
-
-@media (min-width: 50em) {
-  .back-link {
-    display: inline-block;
-    align-self: flex-start;
-    font-size: var(--text-xl);
+  .project-title {
+    color: var(--section-header);
+    padding-bottom: 1rem;
+  }
+  header {
+    padding: 2.5rem 5rem;
   }
 
   .details {
-    float: right;
+    text-align: center;
+  }
+  .back-link {
+    display: none;
   }
 
   .tags {
     display: flex;
-    justify-content: end;
+    justify-content: center;
     gap: 0.5rem;
-    text-align: center;
   }
-}
+
+  .back-link {
+    text-decoration: 1px solid underline transparent;
+    text-underline-offset: 0.25em;
+    transition: text-decoration-color var(--theme-transition);
+  }
+
+  .back-link:hover,
+  .back-link:focus {
+    text-decoration-color: currentColor;
+  }
+
+  @media (min-width: 50em) {
+    .back-link {
+      display: inline-block;
+      align-self: flex-start;
+      font-size: var(--text-xl);
+    }
+
+    .details {
+      float: right;
+    }
+
+    .tags {
+      display: flex;
+      justify-content: end;
+      gap: 0.5rem;
+      text-align: center;
+    }
+  }
 </style>

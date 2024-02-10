@@ -3,79 +3,81 @@
 // https://docs.astro.build/en/core-concepts/layouts/
 
 // Component Imports
-import MainHead from '../components/MainHead.astro';
-import Footer from '../components/Footer.astro';
+import MainHead from "../components/MainHead.astro";
+import Footer from "../components/Footer.astro";
 
 interface Props {
-	title?: string | undefined;
-	description?: string | undefined;
+  title?: string | undefined;
+  description?: string | undefined;
 }
 
 const { title, description } = Astro.props;
 ---
 
 <html lang="en">
-	<head>
-		<MainHead title={title} description={description} />
-	</head>
-	<body>
-		<div class="stack backgrounds">
-			<slot />
-			<Footer />
-		</div>
+  <head>
+    <MainHead title={title} description={description} />
+  </head>
+  <body>
+    <div class="stack backgrounds">
+      <slot />
+      <Footer />
+    </div>
 
-		<script>
-			// Add “loaded” class once the document has completely loaded.
-			addEventListener('load', () => document.documentElement.classList.add('loaded'));
-		</script>
+    <script>
+      // Add “loaded” class once the document has completely loaded.
+      addEventListener("load", () =>
+        document.documentElement.classList.add("loaded")
+      );
+    </script>
 
-		<style>
-			:root {
-				--_placeholder-bg: linear-gradient(transparent, transparent);
-				--bg-image-main: url('/assets/backgrounds/splash-800w.jpg');
-				--bg-image-main-curves: url('/assets/backgrounds/bg-main-light.svg');
-				--bg-svg-blend-mode: overlay;
-				--bg-blend-mode: darken;
-				--bg-image-aspect-ratio: 2.25;
-				--bg-scale: 1.68;
-				--bg-aspect-ratio: calc(var(--bg-image-aspect-ratio) / var(--bg-scale));
-				--bg-gradient-size: calc(var(--bg-scale) * 100%);
-				--bg-height: calc(1600px / var(--bg-aspect-ratio));
-			}
+    <style>
+      :root {
+        --_placeholder-bg: linear-gradient(transparent, transparent);
+        --bg-image-main: url("/assets/backgrounds/splash-800w.jpg");
+        --bg-image-main-curves: url("/assets/backgrounds/bg-main-light.svg");
+        --bg-svg-blend-mode: overlay;
+        --bg-blend-mode: darken;
+        --bg-image-aspect-ratio: 2.25;
+        --bg-scale: 1.68;
+        --bg-aspect-ratio: calc(var(--bg-image-aspect-ratio) / var(--bg-scale));
+        --bg-gradient-size: calc(var(--bg-scale) * 100%);
+        --bg-height: calc(1600px / var(--bg-aspect-ratio));
+      }
 
-			:root.theme-dark {
-				--bg-image-main: url('/assets/backgrounds/dark-splash-800w.jpg');
-				--bg-image-main-curves: url('/assets/backgrounds/bg-main-dark.svg');
-				--bg-svg-blend-mode: darken;
-				--bg-blend-mode: lighten;
-			}
+      :root.theme-dark {
+        --bg-image-main: url("/assets/backgrounds/dark-splash-800w.jpg");
+        --bg-image-main-curves: url("/assets/backgrounds/bg-main-dark.svg");
+        --bg-svg-blend-mode: darken;
+        --bg-blend-mode: lighten;
+      }
 
-			/* These backgrounds are displayed below the fold, so we lazy load them
+      /* These backgrounds are displayed below the fold, so we lazy load them
 			   once the `.loaded` class has been set.  */
-			:root.loaded {
-			}
-			:root.loaded.theme-dark {
-			}
+      :root.loaded {
+      }
+      :root.loaded.theme-dark {
+      }
 
-			@media (min-width: 50em) {
-				:root {
-					--bg-scale: 1;
-					--bg-image-main: url('/assets/backgrounds/splash-1440w.jpg');
-				}
-				:root.theme-dark {
-					--bg-image-main: url('/assets/backgrounds/dark-splash-1440w.jpg');
-				}
+      @media (min-width: 50em) {
+        :root {
+          --bg-scale: 1;
+          --bg-image-main: url("/assets/backgrounds/splash-1440w.jpg");
+        }
+        :root.theme-dark {
+          --bg-image-main: url("/assets/backgrounds/dark-splash-1440w.jpg");
+        }
 
-				:root.loaded {
-				}
-				:root.loaded.theme-dark {
-				}
-			}
+        :root.loaded {
+        }
+        :root.loaded.theme-dark {
+        }
+      }
 
-			.backgrounds {
-				min-height: 100%;
-				background: var(--background);
-			}
-		</style>
-	</body>
+      .backgrounds {
+        min-height: 100%;
+        background: var(--background);
+      }
+    </style>
+  </body>
 </html>

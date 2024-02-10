@@ -18,6 +18,8 @@
   },
   "devDependencies": {
     "@tinacms/cli": "^1.5.39",
-    "@types/node": "^20.10.7"
+    "@types/node": "^20.10.7",
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0"
   }
 }

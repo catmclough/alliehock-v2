@@ -1,130 +1,131 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection } from "astro:content";
 
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 // Component Imports
-import CallToAction from '../components/CallToAction.astro';
-import Grid from '../components/Grid.astro';
-import Icon from '../components/Icon.astro';
-import PortfolioPreview from '../components/PortfolioPreview.astro';
+import CallToAction from "../components/CallToAction.astro";
+import Grid from "../components/Grid.astro";
+import Icon from "../components/Icon.astro";
+import PortfolioPreview from "../components/PortfolioPreview.astro";
 
 // Page section components
-import About from '../components/About.astro';
-import ContactCTA from '../components/ContactCTA.astro';
-import Nav from '../components/Nav.astro';
+import About from "../components/About.astro";
+import ContactCTA from "../components/ContactCTA.astro";
+import Nav from "../components/Nav.astro";
 
 // Content Fetching: List all work projects
-const projects = (await getCollection('work'))
-	.sort((a, b) => a.data.order.valueOf() - b.data.order.valueOf());
+const projects = (await getCollection("work")).sort(
+  (a, b) => a.data.order.valueOf() - b.data.order.valueOf()
+);
 ---
 
 <BaseLayout>
-	<div class="splash-container">
-		<Nav />
-	</div>
-	<div class="stack">
-		<main class="wrapper stack gap-20 lg:gap-48" id="projects">
-			<!-- TODO: Potentially keep a call to action with a link to a full resume? -->
-			<!-- <section class="section with-cta"> -->
-			<section class="section selected-work">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Selected Work</h3>
-					<!-- <p>Take a look below at some of my featured work for clients from the past few years.</p> -->
-				</header>
+  <div class="splash-container">
+    <Nav />
+  </div>
+  <div class="stack">
+    <main class="wrapper stack gap-20 lg:gap-48" id="projects">
+      <!-- TODO: Potentially keep a call to action with a link to a full resume? -->
+      <!-- <section class="section with-cta"> -->
+      <section class="section selected-work">
+        <header class="section-header stack gap-2 lg:gap-4">
+          <h3>Selected Work</h3>
+          <!-- <p>Take a look below at some of my featured work for clients from the past few years.</p> -->
+        </header>
 
-				<div class="gallery">
-					<Grid>
-						{
-							projects.map((project) => (
-								<li>
-									<PortfolioPreview project={project} />
-								</li>
-							))
-						}
-					</Grid>
-				</div>
+        <div class="gallery">
+          <Grid>
+            {
+              projects.map((project) => (
+                <li>
+                  <PortfolioPreview project={project} />
+                </li>
+              ))
+            }
+          </Grid>
+        </div>
 
-				<!-- <div class="cta">
+        <!-- <div class="cta">
 					<CallToAction href="/work/">
 						View All
 						<Icon icon="arrow-right" size="1.2em" />
 					</CallToAction>
 				</div> -->
-			</section>
-		</main>
-		<About />
-		<ContactCTA />
-	</div>
+      </section>
+    </main>
+    <About />
+    <ContactCTA />
+  </div>
 </BaseLayout>
 
 <style>
-	.splash-container {
-		height: 100vh;
+  .splash-container {
+    height: 100vh;
     background-image: var(--bg-image-main);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
-	}
+  }
 
-	.section {
-		display: grid;
-		gap: 2rem;
-	}
-	.section-header {
-		justify-self: center;
-		text-align: center;
-		max-width: 50ch;
-		font-size: var(--text-md);
-		color: var(--gray-300);
-	}
+  .section {
+    display: grid;
+    gap: 2rem;
+  }
+  .section-header {
+    justify-self: center;
+    text-align: center;
+    max-width: 50ch;
+    font-size: var(--text-md);
+    color: var(--gray-300);
+  }
 
-	.section-header h3 {
-		font-size: var(--text-2xl);
-		color: var(--section-header);
-	}
+  .section-header h3 {
+    font-size: var(--text-2xl);
+    color: var(--section-header);
+  }
 
-	.selected-work {
-		padding: 0 0.5rem;
-	}
+  .selected-work {
+    padding: 0 0.5rem;
+  }
 
-	@media (min-width: 50em) {
-		.splash-container {
-			background-position: center;
-		}
-		.section {
-			grid-template-columns: repeat(4, 1fr);
-			grid-template-areas: 'header header header header' 'gallery gallery gallery gallery';
-			gap: 5rem;
-		}
+  @media (min-width: 50em) {
+    .splash-container {
+      background-position: center;
+    }
+    .section {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: "header header header header" "gallery gallery gallery gallery";
+      gap: 5rem;
+    }
 
-		.section.with-cta {
-			grid-template-areas: 'header header header cta' 'gallery gallery gallery gallery';
-		}
+    .section.with-cta {
+      grid-template-areas: "header header header cta" "gallery gallery gallery gallery";
+    }
 
-		.section-header {
-			grid-area: header;
-			font-size: var(--text-lg);
-			justify-self: flex-start;
-			text-align: left;
-		}
+    .section-header {
+      grid-area: header;
+      font-size: var(--text-lg);
+      justify-self: flex-start;
+      text-align: left;
+    }
 
-		.section-header h3 {
-			font-size: var(--text-4xl);
-		}
+    .section-header h3 {
+      font-size: var(--text-4xl);
+    }
 
-		.with-cta .section-header {
-			justify-self: flex-start;
-			text-align: left;
-		}
+    .with-cta .section-header {
+      justify-self: flex-start;
+      text-align: left;
+    }
 
-		.gallery {
-			grid-area: gallery;
-		}
+    .gallery {
+      grid-area: gallery;
+    }
 
-		.cta {
-			grid-area: cta;
-		}
-	}
+    .cta {
+      grid-area: cta;
+    }
+  }
 </style>

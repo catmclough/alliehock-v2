@@ -13,7 +13,7 @@ import PortfolioPreview from "../components/PortfolioPreview.astro";
 // Page section components
 import About from "../components/About.astro";
 import ContactCTA from "../components/ContactCTA.astro";
-import Nav from "../components/Nav.astro";
+import Header from "../components/Header.astro";
 
 // Content Fetching: List all work projects
 const projects = (await getCollection("work")).sort(
@@ -23,7 +23,7 @@ const projects = (await getCollection("work")).sort(
 
 <BaseLayout>
   <div class="splash-container">
-    <Nav />
+    <Header />
   </div>
   <div class="stack">
     <main class="wrapper stack gap-20 lg:gap-48" id="projects">

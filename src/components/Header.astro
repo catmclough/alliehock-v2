@@ -1,6 +1,7 @@
 ---
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import ThemeToggle from "./ThemeToggle.astro";
+import AnchorLinks from "./AnchorLinks.astro";
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
@@ -18,28 +19,7 @@ const textLinks: { label: string; href: string }[] = [
     </div>
     <MenuItems class="hidden lg:flex">
       <div class="nav-items">
-        <div class="anchor-links">
-          {
-            textLinks.map(({ label, href }) => (
-              <div class="anchor-link">
-                <a
-                  aria-current={Astro.url.pathname === href}
-                  class:list={[
-                    "link",
-                    {
-                      active:
-                        Astro.url.pathname === href ||
-                        (href !== "/" && Astro.url.pathname.startsWith(href)),
-                    },
-                  ]}
-                  href={href}
-                >
-                  {label}
-                </a>
-              </div>
-            ))
-          }
-        </div>
+        <AnchorLinks textLinks={textLinks} />
         <div class="theme-toggle">
           <ThemeToggle />
         </div>
@@ -80,19 +60,6 @@ const textLinks: { label: string; href: string }[] = [
     box-shadow: var(--shadow-lg);
   }
 
-  .anchor-links {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    list-style: none;
-    font-size: var(--text-md);
-  }
-
-  .link {
-    text-decoration: none;
-    color: var(--gray-200);
-  }
-
   .theme-toggle {
     display: flex;
     align-items: center;
@@ -108,10 +75,6 @@ const textLinks: { label: string; href: string }[] = [
       /* padding: 2.5rem 9rem; */
     }
 
-    .anchor-links {
-      font-size: var(--text-sm);
-    }
-
     .nav-items {
       visibility: visible;
       display: flex;
@@ -121,52 +84,19 @@ const textLinks: { label: string; href: string }[] = [
       background: none;
       box-shadow: none;
     }
-
-    .anchor-links {
-      flex-direction: row;
-      border-radius: 999rem;
-      border: 0;
-      padding: 0.9rem 0.56rem;
-      background: var(--anchor-links-bg);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .link {
-      padding: 0.5rem 1rem;
-      border-radius: 999rem;
-      color: var(--gray-300);
-      transition:
-        color var(--theme-transition),
-        background-color var(--theme-transition);
-    }
-
-    .link:hover,
-    .link:focus {
-      color: var(--gray-100);
-      background-color: var(--accent-subtle-overlay);
-    }
-
-    .link.active {
-      color: var(--accent-text-over);
-      background-color: var(--accent-regular);
-    }
   }
 
   @media (min-width: 84rem) {
     .page-header {
       padding: 2.5rem 9rem;
     }
+
     .site-title {
       font-size: var(--text-6xl);
     }
 
     .nav-items {
       gap: 4rem;
-    }
-
-    .anchor-links {
-      font-size: var(--text-md);
-      padding: 0.9rem 0.96rem;
     }
   }
 </style>

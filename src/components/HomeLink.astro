@@ -1,0 +1,61 @@
+---
+import Icon from "./Icon.astro";
+---
+
+<div class="home-link">
+  <a
+    aria-current={Astro.url.pathname === "/"}
+    class:list={[
+      "link",
+      {
+        active: Astro.url.pathname === "/",
+      },
+    ]}
+    href="/"
+  >
+    <Icon icon="arrow-left" />
+    Home Page
+  </a>
+</div>
+
+<style>
+  .home-link {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    border-radius: 999rem;
+    border: 0;
+    padding: 0.9rem 0.66rem;
+    background: var(--button-links-bg);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .link {
+    text-decoration: none;
+    color: var(--button-link-color);
+    padding: 0.67rem 0.65rem;
+    border-radius: 999rem;
+  }
+
+  @media (min-width: 50em) {
+    .home-link {
+      font-size: var(--text-md);
+    }
+
+    .link {
+      transition:
+        color var(--theme-transition),
+        background-color var(--theme-transition);
+    }
+
+    .link:hover,
+    .link:focus {
+      color: var(--gray-100);
+      background-color: var(--accent-subtle-overlay);
+    }
+
+    .link.active {
+      color: var(--accent-text-over);
+      background-color: var(--accent-regular);
+    }
+  }
+</style>

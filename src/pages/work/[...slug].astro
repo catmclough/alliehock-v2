@@ -1,11 +1,10 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import Icon from "../../components/Icon.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
 import ContactCTA from "../../components/ContactCTA.astro";
+import HomeLink from "../../components/HomeLink.astro";
 import Pill from "../../components/Pill.astro";
 import ProjectDescription from "../../components/ProjectDescription.astro";
-import HomeLink from "../../components/HomeLink.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 
 interface Props {
   entry: CollectionEntry<"work">;

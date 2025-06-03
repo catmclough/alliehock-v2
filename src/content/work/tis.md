@@ -1,6 +1,6 @@
 ---
 year: 2022
-title: '''Tis The Season'
+title: Tis The Season
 network: CNN
 credit: Senior Story Producer
 img: /assets/tis.jpeg

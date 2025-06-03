@@ -12,6 +12,6 @@ order: 1
 
 An international sports series about Japanese surfers in the wake of the 2021 Olympics.
 
-Contribution spotlight: Shaped over 100 hours of recorded footage, primarily verité, into scenes across 4 episodes.
+Contribution spotlight: Shaped over 100 hours of recorded footage, primarily verité, into scenes to create 4 episodes.
 
 Role:  Story Producer

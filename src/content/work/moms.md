@@ -16,4 +16,4 @@ A 6-part docuseries about the relationship between famous musicians and their mo
 
 Contribution spotlight: Determined the top-level show order and episode themes and weaved the show’s central story – Dave Grohl’s – through the series.
 
-Role: SProducer
+Role: Producer

@@ -1,12 +1,8 @@
 ---
-img: /assets/coffee-portrait.jpg
+img: /assets/6a010535647bf3970b02b7519adaf4200c-800wi.jpg
 title: About Al
-img_alt: >-
-  Allie Hock smiling in a blue shirt and sunglasses at a table with a cup of
-  coffee
+img_alt: '[nothing]'
 ---
-
-**Test bold content**
 
 Allie Hock is a stand up comedian and documentary film producer based
 in Los Angeles. Her work shines a light on under-appreciated topics by

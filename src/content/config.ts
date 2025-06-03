@@ -13,6 +13,14 @@ const workCollection = defineCollection({
   }),
 });
 
+const aboutCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string().optional(),
+  }),
+});
+
 export const collections = {
   work: workCollection,
+  about: aboutCollection,
 };

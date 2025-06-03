@@ -29,6 +29,19 @@ export default defineConfig({
   schema: {
     collections: [
       {
+        name: "page",
+        label: "Page",
+        path: "src/content/pages",
+        format: "md",
+        fields: [
+          {
+            name: "bio",
+            label: "Title",
+            type: "string",
+          },
+        ],
+      },
+      {
         name: "work",
         label: "Work",
         path: "src/content/work",

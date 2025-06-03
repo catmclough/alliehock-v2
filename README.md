@@ -3,6 +3,7 @@
 ## 👽 Tools
 
 - [Astro](https://docs.astro.build)
+- TinaCMS
 - Typescript
 - CSS
 

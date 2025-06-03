@@ -20,10 +20,10 @@ const { Content } = bioEntry ? await bioEntry.render() : { Content: "" };
         <Content />
       </div>
       <img
-        alt="Allie Hock smiling in a blue shirt and sunglasses at a table with a cup of coffee"
+        alt={bioEntry?.data.img_alt || "About Image"}
         width="480"
         height="620"
-        src="/assets/portrait.jpg"
+        src={bioEntry?.data.img}
         loading="lazy"
         decoding="async"
         class="portrait"

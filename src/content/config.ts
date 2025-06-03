@@ -17,6 +17,8 @@ const aboutCollection = defineCollection({
   type: "content",
   schema: z.object({
     title: z.string().optional(),
+    img: z.string(),
+    img_alt: z.string().optional(),
   }),
 });
 

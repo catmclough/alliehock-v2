@@ -34,17 +34,29 @@ export default defineConfig({
         path: "src/content/about",
         fields: [
           {
+            type: "image",
+            name: "img",
+            label: "About Image",
+            required: true,
+          },
+          {
             type: "string",
             name: "title",
             label: "Title",
-            isTitle: true,
-            required: true,
+            required: false,
+          },
+          {
+            type: "string",
+            name: "img_alt",
+            label: "About Image Description",
+            required: false,
           },
           {
             type: "rich-text",
             name: "body",
             label: "Bio Content",
             isBody: true,
+            required: false,
           },
         ],
       },

@@ -1,5 +1,7 @@
 ---
-title: About Al!
+title: About Al
+img: /assets/portrait.jpg
+img_alt: Allie Hock smiling in a blue shirt and sunglasses at a table with a cup of coffee
 ---
 
 **Test bold content**

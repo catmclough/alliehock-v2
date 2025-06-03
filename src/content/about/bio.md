@@ -1,6 +1,8 @@
 ---
-title: About Al
+title: About Al!
 ---
+
+**Test bold content**
 
 Allie Hock is a stand up comedian and documentary film producer based
 in Los Angeles. Her work shines a light on under-appreciated topics by

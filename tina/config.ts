@@ -79,6 +79,12 @@ export default defineConfig({
             required: false,
           },
           {
+            type: "number",
+            name: "year",
+            label: "Year",
+            required: false,
+          },
+          {
             type: "string",
             name: "credit",
             label: "Credit",

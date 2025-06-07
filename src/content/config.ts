@@ -5,9 +5,9 @@ const workCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     network: z.string().optional(),
-    credit: z.string(),
+    credit: z.string().optional(),
     order: z.number(),
-    year: z.number(),
+    year: z.number().optional(),
     img: z.string(),
     img_alt: z.string().optional(),
   }),
